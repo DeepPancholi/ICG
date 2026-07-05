@@ -239,7 +239,7 @@ a:hover {
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-left: 0.2rem;
 }
 
 .badge-popular {
@@ -748,13 +748,13 @@ body.menu-open .mobile-menu-overlay {
   justify-content: center;
   align-items: center;
   min-height: 400px;
-  margin-left: 4rem;
+  /* margin-left: 4rem; */
 }
 
-.service-detail-card.reversed .service-detail-visual {
+/* .service-detail-card.reversed .service-detail-visual {
   margin-right: 4rem;
   margin-left: 0;
-}
+} */
 
 .service-detail-visual svg {
   width: 150px;
