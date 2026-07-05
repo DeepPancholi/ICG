@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects — MEP Engineering Portfolio | ICG Engineering</title>
+    <meta name="description" content="Explore ICG Engineering's portfolio of 500+ MEP projects spanning commercial towers, hospitals, residential complexes, data centers, and industrial facilities across India.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" aria-label="Main Navigation">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo" aria-label="ICG Engineering — Home">
+                <img src="images/logo.png" alt="ICG Engineering Solutions Logo">
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="projects.html" class="nav-link active" aria-current="page">Projects</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary nav-cta" id="nav-cta-btn">Get a Quote</a>
+            <button class="menu-toggle" id="hamburger-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu" aria-label="Mobile Navigation">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+                <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+                <li><a href="projects.html" class="mobile-nav-link active" aria-current="page">Projects</a></li>
+                <li><a href="about.html" class="mobile-nav-link">About</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+                <li><a href="contact.html" class="btn btn-primary mobile-cta">Get a Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" id="page-header-projects">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li aria-current="page">Projects</li>
+                </ol>
+            </nav>
+            <h1 class="fade-in-up">Our Projects</h1>
+            <p class="page-header-subtitle fade-in-up">Delivering engineering excellence across diverse sectors</p>
+        </div>
+    </section>
+
+    <!-- Projects Filter & Grid -->
+    <section class="section projects-section" id="projects-section">
+        <div class="container">
+            <!-- Filter Tabs -->
+            <div class="filter-tabs fade-in-up" id="filter-tabs" role="tablist" aria-label="Filter projects by category">
+                <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" id="filter-all">All</button>
+                <button class="filter-btn" data-filter="commercial" role="tab" aria-selected="false" id="filter-commercial">Commercial</button>
+                <button class="filter-btn" data-filter="healthcare" role="tab" aria-selected="false" id="filter-healthcare">Healthcare</button>
+                <button class="filter-btn" data-filter="residential" role="tab" aria-selected="false" id="filter-residential">Residential</button>
+                <button class="filter-btn" data-filter="industrial" role="tab" aria-selected="false" id="filter-industrial">Industrial</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid" id="projects-grid">
+
+                <!-- Project 1: Skyline Corporate Tower -->
+                <article class="project-card fade-in-up" data-category="commercial" id="project-skyline">
+                    <div class="project-card-image">
+                        <img src="images/project-commercial.jpg" alt="Skyline Corporate Tower — 50-story office complex in Mumbai" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="project-overlay-text">View Project</span>
+                        </div>
+                        <span class="project-category-badge">Commercial</span>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Skyline Corporate Tower</h3>
+                        <p class="project-desc">A landmark 50-story office complex featuring state-of-the-art HVAC systems, smart lighting controls, and integrated fire protection.</p>
+                        <div class="project-meta">
+                            <div class="project-meta-item">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1C4.2 1 2 3.2 2 6c0 3.5 5 7 5 7s5-3.5 5-7c0-2.8-2.2-5-5-5z" stroke="#0066CC" stroke-width="1.2" fill="none"/><circle cx="7" cy="6" r="1.5" stroke="#0066CC" stroke-width="1.2" fill="none"/></svg>
+                                <span>Mumbai, India</span>
+                            </div>
+                            <div class="project-meta-item">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="11" height="11" rx="1.5" stroke="#0066CC" stroke-width="1.2" fill="none"/><path d="M1.5 5h11M5 1.5v11" stroke="#0066CC" stroke-width="1.2"/></svg>
+                                <span>1.2M sq ft</span>
+                            </div>
+                        </div>
+                        <div class="project-services-tag">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2v10" stroke="#00A86B" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            <span>Full MEP Design</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Metro General Hospital -->
+                <article class="project-card fade-in-up" data-category="healthcare" id="project-hospital">
+                    <div class="project-card-image">
+                        <img src="images/project-hospital.jpg" alt="Metro General Hospital — 300-bed multi-specialty hospital in Pune" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="project-overlay-text">View Project</span>
+                        </div>
+                        <span class="project-category-badge">Healthcare</span>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Metro General Hospital</h3>
+                        <p class="project-desc">A 300-bed multi-specialty hospital with critical MEP infrastructure including medical gas systems, isolation room HVAC, and redundant power systems.</p>
+                        <div class="project-meta">
+                            <div class="project-meta-item">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1C4.2 1 2 3.2 2 6c0 3.5 5 7 5 7s5-3.5 5-7c0-2.8-2.2-5-5-5z" stroke="#0066CC" stroke-width="1.2" fill="none"/><circle cx="7" cy="6" r="1.5" stroke="#0066CC" stroke-width="1.2" fill="none"/></svg>
+                                <span>Pune, India</span>
+                            </div>
+                            <div class="project-meta-item">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="11" height="11" rx="1.5" stroke="#0066CC" stroke-width="1.2" fill="none"/><path d="M1.5 5h11M5 1.5v11" stroke="#0066CC" stroke-width="1.2"/></svg>
+                                <span>800,000 sq ft</span>
+                            </div>
+                        </div>
+                        <div class="project-services-tag">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2v10" stroke="#00A86B" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            <span>MEP + Medical Gas</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: The Pinnacle Residences -->
+                <article class="project-card fade-in-up" data-category="residential" id="project-pinnacle">
+                    <div class="project-card-image">
+                        <img src="images/project-residential.jpg" alt="The Pinnacle Residences — 40-story luxury residential tower in Bangalore" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="project-overlay-text">View Project</span>
+                        </div>
+                        <span class="project-category-badge">Residential</span>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">The Pinnacle Residences</h3>
+                        <p class="project-desc">Luxury 40-story residential tower with energy-efficient VRF systems, rainwater harvesting, and premium plumbing fixtures.</p>
+                        <div class="project-meta">
+                            <div class="project-meta-item">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1C4.2 1 2 3.2 2 6c0 3.5 5 7 5 7s5-3.5 5-7c0-2.8-2.2-5-5-5z" stroke="#0066CC" stroke-width="1.2" fill="none"/><circle cx="7" cy="6" r="1.5" stroke="#0066CC" stroke-width="1.2" fill="none"/></svg>
+                                <span>Bangalore, India</span>
+                            </div>
+                            <div class="project-meta-item">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="11" height="11" rx="1.5" stroke="#0066CC" stroke-width="1.2" fill="none"/><path d="M1.5 5h11M5 1.5v11" stroke="#0066CC" stroke-width="1.2"/></svg>
+                                <span>600,000 sq ft</span>
+                            </div>
+                        </div>
+                        <div class="project-services-tag">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2v10" stroke="#00A86B" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            <span>MEP + Fire Protection</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: Sterling Manufacturing Hub -->
+                <article class="project-card fade-in-up" data-category="industrial" id="project-sterling">
+                    <div class="project-card-image">
+                        <img src="images/project-industrial.jpg" alt="Sterling Manufacturing Hub — industrial facility in Chennai" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="project-overlay-text">View Project</span>
+                        </div>
+                        <span class="project-category-badge">Industrial</span>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Sterling Manufacturing Hub</h3>
+                        <p class="project-desc">A modern manufacturing facility with specialized ventilation, process piping, compressed air systems, and industrial fire suppression.</p>
+                        <div class="project-meta">
+                            <div class="project-meta-item">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1C4.2 1 2 3.2 2 6c0 3.5 5 7 5 7s5-3.5 5-7c0-2.8-2.2-5-5-5z" stroke="#0066CC" stroke-width="1.2" fill="none"/><circle cx="7" cy="6" r="1.5" stroke="#0066CC" stroke-width="1.2" fill="none"/></svg>
+                                <span>Chennai, India</span>
+                            </div>
+                            <div class="project-meta-item">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="11" height="11" rx="1.5" stroke="#0066CC" stroke-width="1.2" fill="none"/><path d="M1.5 5h11M5 1.5v11" stroke="#0066CC" stroke-width="1.2"/></svg>
+                                <span>200,000 sq ft</span>
+                            </div>
+                        </div>
+                        <div class="project-services-tag">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2v10" stroke="#00A86B" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            <span>Mechanical + Plumbing</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5: NexGen Data Center -->
+                <article class="project-card fade-in-up" data-category="commercial" id="project-nexgen">
+                    <div class="project-card-image">
+                        <img src="images/project-datacenter.jpg" alt="NexGen Data Center — Tier IV facility in Hyderabad" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="project-overlay-text">View Project</span>
+                        </div>
+                        <span class="project-category-badge">Commercial</span>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">NexGen Data Center</h3>
+                        <p class="project-desc">Tier IV data center with precision cooling, redundant power distribution, advanced fire suppression, and 99.995% uptime engineering.</p>
+                        <div class="project-meta">
+                            <div class="project-meta-item">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1C4.2 1 2 3.2 2 6c0 3.5 5 7 5 7s5-3.5 5-7c0-2.8-2.2-5-5-5z" stroke="#0066CC" stroke-width="1.2" fill="none"/><circle cx="7" cy="6" r="1.5" stroke="#0066CC" stroke-width="1.2" fill="none"/></svg>
+                                <span>Hyderabad, India</span>
+                            </div>
+                            <div class="project-meta-item">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="11" height="11" rx="1.5" stroke="#0066CC" stroke-width="1.2" fill="none"/><path d="M1.5 5h11M5 1.5v11" stroke="#0066CC" stroke-width="1.2"/></svg>
+                                <span>100,000 sq ft</span>
+                            </div>
+                        </div>
+                        <div class="project-services-tag">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2v10" stroke="#00A86B" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            <span>Full MEP + Precision Cooling</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6: Grand Galleria Mall -->
+                <article class="project-card fade-in-up" data-category="commercial" id="project-galleria">
+                    <div class="project-card-image">
+                        <img src="images/project-retail.jpg" alt="Grand Galleria Mall — premium retail destination in Delhi" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="project-overlay-text">View Project</span>
+                        </div>
+                        <span class="project-category-badge">Commercial</span>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Grand Galleria Mall</h3>
+                        <p class="project-desc">Premium retail destination with sophisticated HVAC zoning, architectural lighting design, and comprehensive fire life safety systems.</p>
+                        <div class="project-meta">
+                            <div class="project-meta-item">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1C4.2 1 2 3.2 2 6c0 3.5 5 7 5 7s5-3.5 5-7c0-2.8-2.2-5-5-5z" stroke="#0066CC" stroke-width="1.2" fill="none"/><circle cx="7" cy="6" r="1.5" stroke="#0066CC" stroke-width="1.2" fill="none"/></svg>
+                                <span>Delhi, India</span>
+                            </div>
+                            <div class="project-meta-item">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="11" height="11" rx="1.5" stroke="#0066CC" stroke-width="1.2" fill="none"/><path d="M1.5 5h11M5 1.5v11" stroke="#0066CC" stroke-width="1.2"/></svg>
+                                <span>500,000 sq ft</span>
+                            </div>
+                        </div>
+                        <div class="project-services-tag">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2v10" stroke="#00A86B" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            <span>Full MEP Design</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Banner -->
+    <section class="stats-section" id="stats-section">
+        <div class="container">
+            <div class="stats-grid fade-in-up">
+                <div class="stat-item" id="stat-sectors">
+                    <span class="stat-number" data-target="6">0</span>
+                    <span class="stat-label">Sectors Served</span>
+                </div>
+                <div class="stat-item" id="stat-projects">
+                    <span class="stat-number" data-target="500">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-item" id="stat-sqft">
+                    <span class="stat-number" data-target="50">0</span><span class="stat-suffix">M+ Sq Ft</span>
+                    <span class="stat-label">Designed</span>
+                </div>
+                <div class="stat-item" id="stat-compliance">
+                    <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
+                    <span class="stat-label">Code Compliant</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta-projects">
+        <div class="container fade-in-up">
+            <h2>Have a Project in Mind?</h2>
+            <p>Whether it's a high-rise tower, a hospital, or a manufacturing plant—our MEP team is ready to engineer the perfect solution for your next project.</p>
+            <div class="btn-group">
+                <a href="contact.html" class="btn btn-white" id="cta-contact-btn">Contact Us</a>
+                <a href="tel:+919879874089" class="btn btn-outline-white" id="cta-call-btn">Call Now: +91 9879874089</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo" aria-label="ICG Engineering — Home">
+                        <img src="images/logo.png" alt="ICG Engineering Solutions Logo">
+                    </a>
+                    <p>Delivering innovative MEP engineering solutions that shape the built environment of tomorrow.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html#service-hvac">HVAC Design</a></li>
+                        <li><a href="services.html#service-electrical">Electrical Systems</a></li>
+                        <li><a href="services.html#service-plumbing">Plumbing Design</a></li>
+                        <li><a href="services.html#service-fire">Fire Protection</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1C4.7 1 2 3.7 2 7c0 4.5 6 8 6 8s6-3.5 6-8c0-3.3-2.7-6-6-6z" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="8" cy="7" r="2" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+                            A 207, Money Plant High Street, Jagatpur, S.G. Highway, Ahmedabad – 382470
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2" y="3" width="12" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M2 5l6 4 6-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+                            <a href="mailto:icgengs122@gmail.com">icgengs122@gmail.com</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 2h3l1.5 3.5L5.5 7c1 2 2.5 3.5 4.5 4.5l1.5-2L15 11v3c0 .6-.4 1-1 1C7.4 15 1 8.6 1 3c0-.6.4-1 1-1h1z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+                            <a href="tel:+919879874089">+91 9879874089</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ICG Engineering Solutions. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top-btn" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M10 16V4M10 4L4 10M10 4L16 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
