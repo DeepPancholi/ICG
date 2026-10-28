@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!res.ok) throw new Error(String(res.status));
         contactForm.reset();
         status.classList.add('is-success');
-        status.textContent = 'Message sent. We will reply within one working day.';
+        status.textContent = 'Message sent. Thank you, we will get back to you soon.';
       } catch {
         status.classList.add('is-error');
         status.textContent = 'Your message could not be sent. Please call us on +91 98798 74089 or try again.';
