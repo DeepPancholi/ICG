@@ -847,6 +847,22 @@ body.menu-open .mobile-menu-overlay {
 }
 
 /* ── 9. Projects Section ── */
+.projects-disclaimer {
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--bg-card);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.projects-disclaimer strong {
+  color: var(--text-primary);
+}
+
 .filter-tabs {
   display: flex;
   justify-content: center;
