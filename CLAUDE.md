@@ -4,12 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Static marketing site for ICG Engineering Solutions (an MEP consultancy). It is plain HTML, CSS and vanilla JS, with no build step, package manager, linter or test suite.
+Static marketing site for ICG Engineering Solutions (an MEP consultancy in Ahmedabad). It is plain HTML, CSS and vanilla JS, with no build step, package manager, linter or test suite.
 
 ## Running and deploying
 
-- Preview locally by opening `index.html` directly, or serve the folder: `python -m http.server 8000`
-- Deployment: every push to `master` triggers `.github/workflows/static.yml`, which uploads the **entire repository root** to GitHub Pages. Anything committed to the repo root gets published, so keep scratch files out of it.
+- Preview locally by serving the folder: `python -m http.server 8000`
+- Deployment: every push to `master` triggers `.github/workflows/static.yml`. It copies only the site files (`*.html`, `css`, `js`, `images`, `CNAME`, `robots.txt`, `sitemap.xml`) into `_site` and publishes that to GitHub Pages at icgengs.com. Repo files such as this one are not published. If you add a new top-level folder the site needs, add it to that copy step.
+- Day-to-day work happens on the `development` branch; `master` is the live site.
+- `claude-documents/` is gitignored and holds working notes such as the site audit.
 
 ## Git commits
 
@@ -18,13 +20,11 @@ Static marketing site for ICG Engineering Solutions (an MEP consultancy). It is 
 
 ## Architecture
 
-- **Five standalone pages** (`index.html`, `services.html`, `projects.html`, `about.html`, `contact.html`). There are no templates or includes, so the header/nav, mobile menu, and footer are **duplicated in every page**. Changes to shared chrome (nav links, footer, social links, logo, favicon, `<head>` meta) must be made in all five files.
-- **One stylesheet**, `css/style.css`, split into numbered sections (`/* ── N. Name ── */`: base/variables, typography, utilities, nav, hero, ..., footer, animations, responsive). Colors, shadows, radii and transitions are CSS custom properties on `:root`; use them instead of hard-coded values. Brand primary is `--color-primary: #148478`. Responsive rules are all in the final section, not next to their components.
-- **One script**, `js/script.js`, loaded with `defer` on every page. Everything runs inside a single `DOMContentLoaded` handler as independent feature blocks (`// ── Feature ──`), and each block checks whether its elements exist first, so a page that lacks a feature just skips it. Behaviour is driven by class names and data attributes in the markup:
-  - Scroll reveal: add `.fade-in-up`, `.fade-in-left`, `.fade-in-right` or `.scale-in`. The IntersectionObserver adds `.visible` and staggers siblings by 0.1s.
-  - Stat counters: `.stat-number` with `data-target` and `data-suffix`.
-  - Project filter: `.filter-btn[data-filter]` matches against `.project-card[data-category]` (`all` shows every card).
-  - Testimonial slider, FAQ accordion (`.faq-item`/`.faq-question`), back-to-top button, preloader, and active nav link highlighting (matched from the current filename).
-  - The `fadeInUp` keyframe used by the project filter is injected from JS at the bottom of the file, not defined in the CSS.
-- **Contact form** (`contact.html`, `#contact-form`) posts directly to Formspree (`https://formspree.io/f/mjgqlejq`). `script.js` only validates on the client (required fields, email and phone regex, `.error`/`.success` classes on `.form-group`) and lets the native submit go through when the form is valid.
-- Fonts: Inter (body) and Outfit (headings), loaded from Google Fonts. The footer uses `images/logo_dark.png` and the navbar uses `images/logo.png`.
+- **Pages**: `index.html`, `services.html`, `projects.html`, `about.html`, `contact.html`, plus `404.html` (served by GitHub Pages at any missing path, so it uses `<base href="/">`). There are no templates or includes: the `<head>` meta, top bar, header/nav and footer are **duplicated in every page** and are meant to stay byte-identical. Change shared chrome in all six files. Each page has its own canonical URL and Open Graph tags; the home page also carries the LocalBusiness (ProfessionalService) JSON-LD. Keep `sitemap.xml` in step when adding pages.
+- **One stylesheet**, `css/style.css`, split into numbered sections (`/* ── N. Name ── */`). All colours, type sizes and spacing are tokens on `:root` (brand teal `--teal: #148478`, `--teal-deep`, dark sections `--ink`, `--charcoal`, `--paper`, `--line`); use them instead of hard-coded values. Responsive rules all live in the final section. Fonts: Archivo (headings, slightly condensed via `font-stretch`) and IBM Plex Sans (body), from Google Fonts.
+- **Design language**: left-aligned layouts, hairline dividers rather than shadowed cards, very little motion (only the hero load animation; `prefers-reduced-motion` is respected). The signature element is the CAD-style dimension line above each figure (`.figures` / `.dim`), so don't add other decorative flourishes around it.
+- **Placeholders**: content still awaiting real information from ICG is marked with `.ph` (inline text) or `.ph-block` (image/logo boxes), which render as hatched yellow boxes. Replace them as real content arrives; `grep -c 'class="ph' *.html` shows what is left. The projects themselves are illustrative (fictional names) and carry a disclaimer note; keep it until real projects replace them.
+- **Projects**: cards are `.project-card[data-category]` with one of eight sector keys: `commercial`, `hotels`, `villas`, `corporate`, `hospitals`, `institutional`, `residential`, `industrial`. Filter buttons use `data-filter` and `aria-pressed`. The chosen filter is kept in the URL hash, so home-page sector tiles link to `projects.html#<key>`.
+- **One script**, `js/script.js`, loaded with `defer`. One `DOMContentLoaded` handler with independent feature blocks (`// ── Feature ──`), each of which checks its elements exist first: header scroll state, mobile menu (`.menu-toggle` / `#site-nav`), project filter, services-page index highlighting, contact form, footer year. The FAQ uses native `<details>`, so it has no JS.
+- **Contact form** (`#contact-form`) validates on the client, then submits to Formspree (`https://formspree.io/f/mjgqlejq`) with `fetch` and shows the result inline in `.form-status`. `_gotcha` is the honeypot spam field and `_subject` sets the email subject.
+- **Images**: photos are WebP in `images/projects/` at 640 and 1200 px wide (`srcset`), plus `images/hero.webp` and `images/og-image.jpg` (1200x630 share image). `logo.png` is used on light backgrounds and `logo-light.png` (white lettering) on dark ones. The original JPGs and old logo files stay in the repo as sources but are excluded from the deploy.
