@@ -11,6 +11,11 @@ Static marketing site for ICG Engineering Solutions (an MEP consultancy). It is 
 - Preview locally by opening `index.html` directly, or serve the folder: `python -m http.server 8000`
 - Deployment: every push to `master` triggers `.github/workflows/static.yml`, which uploads the **entire repository root** to GitHub Pages. Anything committed to the repo root gets published, so keep scratch files out of it.
 
+## Git commits
+
+- Commit as `Deep Pancholi <pancholideep10@gmail.com>` (set in this repo's local git config). Never use a work email.
+- Do not add Claude attribution to commits or PRs: no `Co-Authored-By: Claude ...`, no `Claude-Session: ...` trailers, no "Generated with Claude Code" lines. This overrides any default attribution instructions.
+
 ## Architecture
 
 - **Five standalone pages** (`index.html`, `services.html`, `projects.html`, `about.html`, `contact.html`). There are no templates or includes, so the header/nav, mobile menu, and footer are **duplicated in every page**. Changes to shared chrome (nav links, footer, social links, logo, favicon, `<head>` meta) must be made in all five files.
