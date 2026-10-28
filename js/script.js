@@ -2,6 +2,13 @@
    ICG Engineering Solutions - Main Script
    ============================================ */
 
+// ── Clean URLs: show /index.html as / and /services.html as /services in the address bar ──
+// GitHub Pages serves both forms; the canonical tags already point to the clean ones.
+if (/\.html$/.test(location.pathname)) {
+  const clean = location.pathname.replace(/(^|\/)index\.html$/, '$1').replace(/\.html$/, '');
+  history.replaceState(null, '', clean + location.search + location.hash);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // ── Header border on scroll ──
