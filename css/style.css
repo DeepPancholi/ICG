@@ -202,16 +202,16 @@ p { max-width: 68ch; }
   display: none; width: 48px; height: 48px; margin-left: auto;
   background: none; border: 1px solid var(--line); border-radius: var(--radius); cursor: pointer;
 }
-.menu-toggle span, .menu-toggle span::before, .menu-toggle span::after {
+.menu-toggle .bars, .menu-toggle .bars::before, .menu-toggle .bars::after {
   display: block; width: 20px; height: 2px; background: var(--charcoal); margin-inline: auto;
   position: relative; transition: transform 0.25s var(--ease);
 }
-.menu-toggle span::before, .menu-toggle span::after { content: ''; position: absolute; left: 0; }
-.menu-toggle span::before { top: -6px; }
-.menu-toggle span::after { top: 6px; }
-.menu-toggle[aria-expanded="true"] span { background: transparent; }
-.menu-toggle[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
-.menu-toggle[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+.menu-toggle .bars::before, .menu-toggle .bars::after { content: ''; position: absolute; left: 0; }
+.menu-toggle .bars::before { top: -6px; }
+.menu-toggle .bars::after { top: 6px; }
+.menu-toggle[aria-expanded="true"] .bars { background: transparent; }
+.menu-toggle[aria-expanded="true"] .bars::before { transform: translateY(6px) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] .bars::after { transform: translateY(-6px) rotate(-45deg); }
 
 /* ── 8. Hero (home) ── */
 .hero { position: relative; background: var(--ink); color: #D7E4E1; overflow: hidden; }
